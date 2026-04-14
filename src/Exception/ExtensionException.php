@@ -8,7 +8,7 @@ class ExtensionException extends \Exception
 {
     protected $extension;
 
-    public function __construct($message, ExtensionBase $extension = null)
+    public function __construct($message, ?ExtensionBase $extension = null)
     {
         parent::__construct($message);
 

@@ -12,7 +12,7 @@ class Prompter
     private $formatter;
     private $console;
 
-    public function __construct(ServiceContainer $container = null)
+    public function __construct(?ServiceContainer $container = null)
     {
         $container = $container ?: ServiceContainer::getInstance();
         $this->formatter = $container['formatter'];

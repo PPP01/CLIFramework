@@ -27,7 +27,7 @@ abstract class Command extends CommandBase
 
     public $name;
 
-    public function __construct(CommandBase $parent = null)
+    public function __construct(?CommandBase $parent = null)
     {
         parent::__construct($parent);
     }

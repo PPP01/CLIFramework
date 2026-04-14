@@ -83,7 +83,7 @@ abstract class CommandBase
 
     protected $extensions = array();
 
-    public function __construct(CommandBase $parent = null) 
+    public function __construct(?CommandBase $parent = null)
     {
         // this variable is optional (for backward compatibility)
         if ($parent) {

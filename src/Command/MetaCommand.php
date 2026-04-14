@@ -36,7 +36,7 @@ class UndefinedOptionException extends Exception
     }
 }
 
-function output($str, OptionResult $opts = null)
+function output($str, ?OptionResult $opts = null)
 {
     echo $str;
 }

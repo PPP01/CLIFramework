@@ -100,7 +100,7 @@ class Application extends CommandBase
     /** @var bool */
     protected $commandAutoloadEnabled = false;
 
-    public function __construct(Container $container = null, CommandBase $parent = null)
+    public function __construct(?Container $container = null, ?CommandBase $parent = null)
     {
         parent::__construct($parent);
 

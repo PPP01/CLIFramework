@@ -7,6 +7,8 @@ class ArgInfo
 {
     public $name;
 
+    public $desc;
+
     public $isa;
 
     public $optional;
