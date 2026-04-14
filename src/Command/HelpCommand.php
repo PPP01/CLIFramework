@@ -151,12 +151,12 @@ class HelpCommand extends Command implements CommandInterface
             $logger->write($cmd->getFormattedHelpText());
         } else {
             $cmd = $this->parent;
-            $logger->write($formatter->format(ucfirst($cmd->brief()), 'strong_white')."\n\n");
+            $logger->write($formatter->format(ucfirst($cmd->brief()), 'strong_white')."\n");
 
             if ($usage = trim((string) $cmd->usage())) {
                 $logger->write($formatter->format('USAGE', 'strong_white')."\n");
                 $logger->write($usage);
-                $logger->write("\n\n");
+                $logger->write("\n");
             }
 
             $logger->write($formatter->format('SYNOPSIS', 'strong_white')."\n");
@@ -174,12 +174,12 @@ class HelpCommand extends Command implements CommandInterface
                 }
             }
 
-            $logger->write("\n\n");
+            $logger->write("\n");
 
             // print application options
             $logger->write($formatter->format('OPTIONS', 'strong_white')."\n");
             $logger->write($printer->render($cmd->optionSpecs));
-            $logger->write("\n\n");
+            $logger->write("\n");
 
             // get command list, Command classes should be preloaded.
             $classes = get_declared_classes();
